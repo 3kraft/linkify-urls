@@ -119,11 +119,6 @@ test('supports `value` option as function', t => {
 	}), 'See <a href="https://github.com/sindresorhus.com/linkify-urls">github.com</a> for a solution');
 });
 
-test('skips URLs preceded by a `+` sign', t => {
-	const fixture = 'git+https://github.com/sindresorhus/ava';
-	t.is(linkifyUrls(fixture), fixture);
-});
-
 test('supports username in url', t => {
 	t.is(linkifyUrls('https://user@sindresorhus.com/@foo'), '<a href="https://user@sindresorhus.com/@foo">https://user@sindresorhus.com/@foo</a>');
 });
